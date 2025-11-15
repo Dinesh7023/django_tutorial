@@ -1,13 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    {% for x in fruits %}
+    <!-- {% for x in fruits %}
     <h1>{{x}}</h1>
+    {% endfor %} -->
+    <!-- <h1>Hello {{firstname}}, How are You?</h1> -->
+    <!-- {% with firstname="Tobies" %}
+    <h1>Hello {{firstname}}, How are You?</h1>
+    {% endwith %} -->
+    <!-- {% for x in mymembers %}
+    <li>{{x.firstname}}</li>
+    <li>{{x.lastname}}</li>
+    {% endfor %} -->
+    <!-- {% if greetings == 1 %}
+    <h1>Hello</h1>
+    {% else %}
+    <h1>Bye</h1>
+    {% endif %} -->
+    <!-- {% autoescape off %}
+    {{heading}}
+    {% endautoescape %}
+    {% comment "optional" %}
+    {{greetings}}
+    {% endcomment %} -->
+    <!-- {% for x in mymembers %}
+    <ul>
+        <li style="color: {% cycle 'red' 'blue' %}">
+        {{x.firstname}}</li>
+    </ul>    
+    {% endfor%} -->
+    <!-- {% if greetings == 1 %}
+    <h1>hello</h1>
+    {% elif greetings == 2 %}
+    <h1>hi</h1>
+    {% else %}
+    <h1>bye</h1>
+    {% endif %} -->
+    <!-- {% for x in cars %}
+    <h1>{{x.brand}}</h1>
+    <p>{{x.color}}</p>
+    <p>{{x.price}}</p>
+    {% endfor %}
+     {% for x in cars reversed %}
+    <h1>{{x.brand}}</h1>
+    <p>{{x.color}}</p>
+    <p>{{x.price}}</p>
+    {% endfor %} -->
+    {% for x in cars %}
+    <h1>{{x.brand}}</h1>
+    <p>{{x.color}}</p>
+    <p>{{x.price}}</p>
+    {% empty %}
+    <h1>No Datas</h1>
     {% endfor %}
 </body>
+
 </html>

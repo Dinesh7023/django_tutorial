@@ -24,8 +24,23 @@ def main(request):
     return render(request, 'main.html')
 
 def testing(request):
+    mymembers = Member.objects.all().values()
     context = {
-        'fruits' : ['Apple', 'Banana', 'Orange'],
+        'greetings' : 1,
+        'heading': 'Hello &lt;i&gt;my&lt;/i&gt; World!',
+        "mymembers" : mymembers,
+        "cars" : [
+            # {
+            #     "brand" : "Ford",
+            #     "color" : "white",
+            #     "price" : 1000000,
+            # },
+            # {
+            #     "brand" : "VW",
+            #     "color" : "Black",
+            #     "price" : 1500000,
+            # }
+        ]
     }
 
     return render(request, 'template.html', context)
